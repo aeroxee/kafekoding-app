@@ -88,7 +88,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-start md:items-center flex-col md:flex-row gap-4 md:me-10">
             <Link
-              href=""
+              href="/"
               className="font-normal text-gray-500 hover:text-sky-600"
             >
               Home
