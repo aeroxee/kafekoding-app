@@ -7,10 +7,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-import fs from "node:fs/promises";
-import { getPlaiceholder } from "plaiceholder";
 
 import ClassLists from "@/components/class-lists";
+import Footer from "@/components/footer";
 import {
   Accordion,
   AccordionContent,
@@ -27,9 +26,6 @@ import vector from "@/public/Vector 18.svg";
 import laptop from "@/public/bg.jpg";
 
 export default async function Home() {
-  const buffer = await fs.readFile("./public/Programmer-cuate 1.png");
-  const { base64 } = await getPlaiceholder(buffer);
-
   return (
     <>
       <header className="w-full min-h-screen flex items-center justify-center">
@@ -50,8 +46,6 @@ export default async function Home() {
             width={1200}
             height={800}
             loading="lazy"
-            placeholder="blur"
-            blurDataURL={base64}
             className="w-[471px] h-[471px]"
           />
         </div>
@@ -200,15 +194,15 @@ export default async function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Card>
+              <Image
+                src={laptop}
+                alt=""
+                width={1200}
+                height={800}
+                className="w-full rounded-t-sm"
+                loading="lazy"
+              />
               <CardContent className="p-3 space-y-3">
-                <Image
-                  src={laptop}
-                  alt=""
-                  width={1200}
-                  height={800}
-                  className="w-full rounded-xl"
-                  loading="lazy"
-                />
                 <p className="capitalize font-extrabold">
                   Research aplikasi line dengan case study bagaimana cara
                   mengingkatkan user
@@ -220,15 +214,15 @@ export default async function Home() {
               </CardFooter>
             </Card>
             <Card>
+              <Image
+                src={laptop}
+                alt=""
+                width={1200}
+                height={800}
+                className="w-full rounded-t-sm"
+                loading="lazy"
+              />
               <CardContent className="p-3 space-y-3">
-                <Image
-                  src={laptop}
-                  alt=""
-                  width={1200}
-                  height={800}
-                  className="w-full rounded-xl"
-                  loading="lazy"
-                />
                 <p className="capitalize font-extrabold">
                   Research aplikasi line dengan case study bagaimana cara
                   mengingkatkan user
@@ -240,15 +234,15 @@ export default async function Home() {
               </CardFooter>
             </Card>
             <Card>
+              <Image
+                src={laptop}
+                alt=""
+                width={1200}
+                height={800}
+                className="w-full rounded-t-sm"
+                loading="lazy"
+              />
               <CardContent className="p-3 space-y-3">
-                <Image
-                  src={laptop}
-                  alt=""
-                  width={1200}
-                  height={800}
-                  className="w-full rounded-xl"
-                  loading="lazy"
-                />
                 <p className="capitalize font-extrabold">
                   Research aplikasi line dengan case study bagaimana cara
                   mengingkatkan user
@@ -428,6 +422,9 @@ export default async function Home() {
         </section>
       </Container>
       {/*  */}
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

@@ -5,15 +5,13 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Poppins as FontSans } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
-import "yet-another-react-lightbox/plugins/captions.css";
-import "yet-another-react-lightbox/styles.css";
 import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
 
   variable: "--font-sans",
-  weight: ["300", "400", "600", "800", "900"],
+  weight: ["200", "300", "400", "600", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -28,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="id" suppressHydrationWarning>
       <body className={cn(fontSans.variable)}>
         <ThemeProvider
           attribute="class"
