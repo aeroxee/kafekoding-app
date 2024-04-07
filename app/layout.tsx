@@ -15,9 +15,27 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kafekoding-app.vercel.app"),
   title: "Kafe Koding",
   description:
     "Kafe Koding merupakan sebuah komunitas belajar yang bergerak di bidang IT dan juga tempat sharing ilmu programing dan seputar dunia IT.",
+  openGraph: {
+    title: "Kafe Koding",
+    description:
+      "Kafe Koding merupakan sebuah komunitas belajar yang bergerak di bidang IT dan juga tempat sharing ilmu programing dan seputar dunia IT.",
+  },
+  twitter: {
+    title: "Kafe Koding",
+    description:
+      "Kafe Koding merupakan sebuah komunitas belajar yang bergerak di bidang IT dan juga tempat sharing ilmu programing dan seputar dunia IT.",
+  },
+  keywords: [
+    "Kafe Koding",
+    "Koding",
+    "Kafe",
+    "Belajar Koding",
+    "Kursus Koding",
+  ],
 };
 
 export default function RootLayout({
